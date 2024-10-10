@@ -138,6 +138,17 @@
             text-align: center;
             margin-top: 20px;
         }
+
+         .skill-item img {
+    max-width: 100%; /* Ensures the badge resizes correctly */
+    height: auto; /* Maintains aspect ratio */
+}
+
+@media (max-width: 576px) {
+    .skill-block {
+        font-size: 0.9em; /* Adjust font size for small screens */
+    }
+}
     </style>
 </head>
 
@@ -400,8 +411,11 @@
      <!-- Social Profiles -->
 <section id="social-profiles" class="container text-center">
     <h2 class="section-title">Follow Me</h2>
-    <div class="badge-base LI-profile-badge" data-locale="en_US" data-size="medium" data-theme="light" data-type="VERTICAL" data-vanity="shubhyaa" data-version="v1"><a class="badge-base__link LI-simple-link" href="https://in.linkedin.com/in/shubhyaa?trk=profile-badge">Shubham Tilekar</a></div>
-              
+    <div class="col-md-3 col-sm-4 col-6 skill-item">
+    <div class="skill-block">
+        <img src="https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white" alt="LinkedIn" class="img-fluid">
+    </div>
+    </div>
 </section>
 
     <!-- Scroll-to-Top Button -->

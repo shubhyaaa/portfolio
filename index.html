@@ -5,70 +5,160 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Shubham Tilekar | Software Developer Portfolio</title>
-    <meta name="description" content="Portfolio of Shubham Tilekar, a skilled software developer with expertise in Java, Node.js, .NET, and more. Explore my projects, skills, and professional experience.">
-    <meta name="keywords" content="Shubham Tilekar, Bhalawali, Rajapur, Ratnagiri, Software Developer, Portfolio, Java, Node.js, Angular, .NET, Spring Framework, Web Development, AI Integration, OpenAI">
+
+    <!-- SEO Meta Tags -->
+    <meta name="description"
+        content="Portfolio of Shubham Tilekar, a skilled software developer with expertise in Java, Node.js, .NET, and more. Explore my projects, skills, and professional experience.">
+    <meta name="keywords"
+        content="Shubham Tilekar, Bhalawali, Rajapur, Ratnagiri, Software Developer, Portfolio, Java, Node.js, Angular, .NET, Spring Framework, Web Development, AI Integration, OpenAI">
     <meta name="author" content="Shubham Tilekar">
+
+    <!-- Open Graph Meta Tags -->
     <meta property="og:title" content="Shubham Tilekar | Software Developer Portfolio">
-    <meta property="og:description" content="Explore the professional portfolio of Shubham Tilekar, featuring projects, skills, and experience in software development.">
+    <meta property="og:description"
+        content="Explore the professional portfolio of Shubham Tilekar, featuring projects, skills, and experience in software development.">
     <meta property="og:image" content="profile.jpg">
     <meta property="og:url" content="https://shubhyaaa.github.io/portfolio/">
     <meta property="og:type" content="website">
+
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <style>
-        :root {
-            --primary-color: #06A77D;
-            --secondary-color: #005377;
-            --accent-color: #D5C67A;
-            --light-bg: #f0f4f8;
-        }
         body {
             font-family: Arial, sans-serif;
-            background-color: var(--light-bg);
-            color: var(--secondary-color);
         }
-        a {
-            color: var(--primary-color);
-            transition: color 0.3s ease;
+
+        section {
+            margin-bottom: 40px;
         }
-        a:hover {
-            color: var(--accent-color);
+
+        p {
+            text-align: justify;
         }
+
         .navbar {
-            background-color: var(--light-bg);
-            border-bottom: 2px solid var(--primary-color);
+            margin-bottom: 40px;
         }
+
         .section-title {
-            color: var(--primary-color);
-            border-bottom: 2px solid var(--accent-color);
-            padding-bottom: 10px;
+            text-align: center;
+            margin-bottom: 25px;
         }
-        .skill-block, .timeline-item, #contact {
-            background-color: white;
+
+        .skills .progress {
+            margin-bottom: 20px;
+        }
+
+        .project-card {
+            margin-bottom: 20px;
+        }
+
+        .social-icons a {
+            margin: 0 10px;
+        }
+
+        .skill-item {
+            margin-bottom: 30px;
+            transition: transform 0.3s ease;
+        }
+
+        .skill-block {
+            background-color: #f0f0f0;
+            color: #333;
             padding: 20px;
             border-radius: 8px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            font-weight: bold;
             transition: all 0.3s ease;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
         }
-        .skill-block:hover, .timeline-item:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+
+        .skill-block:hover {
+            transform: scale(1.1);
+            box-shadow: 0 6px 8px rgba(0, 0, 0, 0.15);
         }
+
+        @media (max-width: 576px) {
+            .skill-block {
+                font-size: 1em;
+            }
+        }
+
+        #contact {
+            padding: 20px 10px;
+            background-color: #f9f9f9;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            margin-top: 20px;
+        }
+
+        #experience {
+            padding: 20px 10px;
+            background-color: #f9f9f9;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .contact-info p {
+            font-size: 1.2em;
+            color: #333;
+        }
+
+        .contact-info a {
+            color: #007bff;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        .contact-info a:hover {
+            color: #0056b3;
+        }
+
         #scrollTopBtn {
-            background-color: var(--primary-color);
+            display: none;
+            position: fixed;
+            bottom: 20px;
+            right: 30px;
+            z-index: 99;
+            border: none;
+            outline: none;
+            background-color: #007bff;
             color: white;
+            cursor: pointer;
+            padding: 15px;
+            border-radius: 50%;
+            font-size: 18px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            transition: background-color 0.3s ease, transform 0.3s ease;
         }
+
         #scrollTopBtn:hover {
-            background-color: var(--secondary-color);
+            background-color: #0056b3;
+            transform: scale(1.1);
         }
+
         footer {
-            background-color: var(--light-bg);
-            color: var(--secondary-color);
+            background-color: #f8f9fa;
+            padding: 20px 0;
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        .skill-item img {
+            max-width: 100%;
+            height: auto;
+        }
+
+        @media (max-width: 576px) {
+            .skill-block {
+                font-size: 0.9em;
+            }
         }
     </style>
 </head>
 
 <body>
-    <nav class="navbar navbar-expand-lg navbar-light">
+
+    <!-- Header and Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
         <div class="container">
             <a class="navbar-brand" href="#">Shubham Tilekar</a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
@@ -86,33 +176,278 @@
             </div>
         </div>
     </nav>
+
+    <!-- About Section -->
     <section id="about" class="container">
         <h2 class="section-title">About Me</h2>
-        <!-- About section content -->
+        <div class="row">
+            <div class="col-md-4 text-center">
+                <img src="profile.jpg" alt="Shubham Tilekar" class="img-fluid rounded-circle mb-3" width="200">
+            </div>
+            <div class="col-md-8">
+                <p>Passionate Computer engineer started career as a software
+                    developer at AGS TTL in June 2022, worked on banking
+                    domain projects. In October 2023, I joined a CIGS to take on
+                    greater responsibilities and gain experience in end-to-end
+                    software development across various technologies. This
+                    transition significantly enhanced my skills. My expertise
+                    includes Core Java, Spring Framework, .NET Framework, Node.js, Angular, Hibernate,
+                    MySQL, Microsoft SQL Server, Python, HTML, CSS, Bootstrap, Apache Tomcat,
+                    and Debugging and Troubleshooting. I have also integrated
+                    OpenAI APIs into projects to add AI capabilities.
+                </p>
+            </div>
+        </div>
     </section>
+
+    <!-- Skills Section -->
     <section id="skills" class="container text-center">
         <h2 class="section-title">Skills</h2>
-        <!-- Skills section content -->
+        <div class="row">
+            <div class="col-md-3 col-sm-4 col-6 skill-item">
+                <div class="skill-block">
+                    <img src="https://img.shields.io/badge/Spring-6DB33F?style=for-the-badge&logo=spring&logoColor=white"
+                        alt="Spring">
+                </div>
+            </div>
+            <div class="col-md-3 col-sm-4 col-6 skill-item">
+                <div class="skill-block">
+                    <img src="https://img.shields.io/badge/Node.js-339933?style=for-the-badge&logo=nodedotjs&logoColor=white"
+                        alt="Node API">
+                </div>
+            </div>
+            <div class="col-md-3 col-sm-4 col-6 skill-item">
+                <div class="skill-block">
+                    <img src="https://img.shields.io/badge/Flask-000000?style=for-the-badge&logo=flask&logoColor=white"
+                        alt="Flask">
+                </div>
+            </div>
+            <div class="col-md-3 col-sm-4 col-6 skill-item">
+                <div class="skill-block">
+                    <img src="https://img.shields.io/badge/OpenAI-412991?style=for-the-badge&logo=openai&logoColor=white"
+                        alt="OpenAI">
+                </div>
+            </div>
+            <div class="col-md-3 col-sm-4 col-6 skill-item">
+                <div class="skill-block">
+                    <img src="https://img.shields.io/badge/ASP.NET-512BD4?style=for-the-badge&logo=.net&logoColor=white"
+                        alt="ASP.Net">
+                </div>
+            </div>
+            <div class="col-md-3 col-sm-4 col-6 skill-item">
+                <div class="skill-block">
+                    <img src="https://img.shields.io/badge/Webforms-0078D4?style=for-the-badge&logo=windows&logoColor=white"
+                        alt="Webforms">
+                </div>
+            </div>
+            <div class="col-md-3 col-sm-4 col-6 skill-item">
+                <div class="skill-block">
+                    <img src="https://img.shields.io/badge/Web_Services-0078D4?style=for-the-badge&logo=windows&logoColor=white"
+                        alt="Web Services">
+                </div>
+            </div>
+            <div class="col-md-3 col-sm-4 col-6 skill-item">
+                <div class="skill-block">
+                    <img src="https://img.shields.io/badge/Windows_Form-0078D4?style=for-the-badge&logo=windows&logoColor=white"
+                        alt="Windows form">
+                </div>
+            </div>
+            <div class="col-md-3 col-sm-4 col-6 skill-item">
+                <div class="skill-block">
+                    <img src="https://img.shields.io/badge/Hibernate-59666C?style=for-the-badge&logo=hibernate&logoColor=white"
+                        alt="Hibernate">
+                </div>
+            </div>
+            <div class="col-md-3 col-sm-4 col-6 skill-item">
+                <div class="skill-block">
+                    <img src="https://img.shields.io/badge/SQL_Server-CC2927?style=for-the-badge&logo=microsoft-sql-server&logoColor=white"
+                        alt="SQL Server">
+                </div>
+            </div>
+            <div class="col-md-3 col-sm-4 col-6 skill-item">
+                <div class="skill-block">
+                    <img src="https://img.shields.io/badge/MySQL-4479A1?style=for-the-badge&logo=mysql&logoColor=white"
+                        alt="MySQL">
+                </div>
+            </div>
+            <div class="col-md-3 col-sm-4 col-6 skill-item">
+                <div class="skill-block">
+                    <img src="https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black"
+                        alt="Javascript">
+                </div>
+            </div>
+            <div class="col-md-3 col-sm-4 col-6 skill-item">
+                <div class="skill-block">
+                    <img src="https://img.shields.io/badge/Angular-DD0031?style=for-the-badge&logo=angular&logoColor=white"
+                        alt="Angular">
+                </div>
+            </div>
+            <div class="col-md-3 col-sm-4 col-6 skill-item">
+                <div class="skill-block">
+                    <img src="https://img.shields.io/badge/Bootstrap-563D7C?style=for-the-badge&logo=bootstrap&logoColor=white"
+                        alt="Bootstrap">
+                </div>
+            </div>
+            <div class="col-md-3 col-sm-4 col-6 skill-item">
+                <div class="skill-block">
+                    <img src="https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white"
+                        alt="HTML">
+                </div>
+            </div>
+            <div class="col-md-3 col-sm-4 col-6 skill-item">
+                <div class="skill-block">
+                    <img src="https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white"
+                        alt="CSS">
+                </div>
+            </div>
+            <div class="col-md-3 col-sm-4 col-6 skill-item">
+                <div class="skill-block">
+                    <img src="https://img.shields.io/badge/Apache_Tomcat-F8DC75?style=for-the-badge&logo=apache-tomcat&logoColor=black"
+                        alt="Apache Tomcat">
+                </div>
+            </div>
+            <div class="col-md-3 col-sm-4 col-6 skill-item">
+                <div class="skill-block">
+                    <img src="https://img.shields.io/badge/GIT-F05032?style=for-the-badge&logo=git&logoColor=white"
+                        alt="GIT">
+                </div>
+            </div>
+            <div class="col-md-3 col-sm-4 col-6 skill-item">
+                <div class="skill-block">
+                    <img src="https://img.shields.io/badge/Troubleshooting-0078D4?style=for-the-badge&logo=windows&logoColor=white"
+                        alt="Troubleshooting">
+                </div>
+            </div>
+            <div class="col-md-3 col-sm-4 col-6 skill-item">
+                <div class="skill-block">
+                    <img src="https://img.shields.io/badge/Debugging-0078D4?style=for-the-badge&logo=windows&logoColor=white"
+                        alt="Debugging">
+                </div>
+            </div>
+
+        </div>
     </section>
+
+    <!-- Projects Section -->
     <section id="projects" class="container">
         <h2 class="section-title">Projects</h2>
-        <!-- Projects section content -->
+        <div class="row">
+            <div class="col-md-4 ">
+                <div class="skill-item">
+                    <div class="skill-block">
+                        <p>Test Gennie</p>
+                        <p class="card-text">AI enabled application that automates test case and test data generation
+                            for testing,
+                            with an integrated performance testing tool. (3 Months)</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 ">
+                <div class="skill-item">
+                    <div class="skill-block">
+                        <p>Candela Infotech</p>
+                        <p class="card-text">Official site of employer organization offering software skills development
+                            courses and admin console for projects like saralshiksha.org. (9 Months)</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 ">
+                <div class="skill-item">
+                    <div class="skill-block">
+                        <p>Saral Shiksha</p>
+                        <p class="card-text">E-learning platform for secondary and higher secondary students, also a
+                            student progress management system for institutions. (6 Months)</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 ">
+                <div class="skill-item">
+                    <div class="skill-block">
+                        <p>EmPay</p>
+                        <p class="card-text">Project to onboard Merchants, assign POS terminals, generate necessary
+                            reports, and manage users and banking reports. (12 Months)</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 ">
+                <div class="skill-item">
+                    <div class="skill-block">
+                        <p>Digital Signage</p>
+                        <p class="card-text">A media player built using Java Struts, used in banks and organizations to
+                            play media such as tokens and advertisements. (5 Months)</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-4 ">
+                <div class="skill-item">
+                    <div class="skill-block">
+                        <p>College Management System</p>
+                        <p class="card-text">Web application managing attendance, notifications, and employee and
+                            student information. (4 Months)</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 ">
+                <div class="skill-item">
+                    <div class="skill-block">
+                        <p>Hotel Management System</p>
+                        <p class="card-text">Web application for booking rooms and tables, and managing customer logins.
+                            (3 Months)</p>
+                    </div>
+                </div>
+            </div>
+        </div>
     </section>
+
+
+    <!-- Experience Section -->
     <section id="experience" class="container">
         <h2 class="section-title">Experience</h2>
-        <!-- Experience section content -->
+        <div class="timeline">
+            <div class="timeline-item">
+                <h5>Senior Software Developer at Candela Infotech Global Solutions</h5>
+                <p><strong>Oct 2023 - Present</strong></p>
+                <p>End-to-end software development across various technologies like NodeJS, .Net, Javascript. Integrated
+                    OpenAI APIs to add AI capabilities.</p>
+            </div>
+            <div class="timeline-item">
+                <h5>Software Developer at AGS Transact Technologies</h5>
+                <p><strong>Jun 2022 - Oct 2023</strong></p>
+                <p>Worked on banking domain projects using Spring framework, Hibernate, JSP, Javascript, and Tomcat
+                    server.</p>
+            </div>
+        </div>
     </section>
+
+    <!-- Contact Section -->
     <section id="contact" class="container">
-        <h2 class="section-title">Contact</h2>
-        <!-- Contact section content -->
+        <h2 class="section-title  text-center">Contact</h2>
+
+        <div class="contact-info">
+            <p>Email: <a href="mailto:shubhamkirantilekar@gmail.com">shubhamkirantilekar@gmail.com</a></p>
+            <p>Phone: <a href="tel:+917218891123">+91 7218891123</a></p>
+        </div>
     </section>
-    <button onclick="topFunction()" id="scrollTopBtn" title="Go to top">&#8679;</button>
+
+    <!-- Scroll-to-Top Button -->
+    <button onclick="topFunction()" id="scrollTopBtn" title="Go to top">
+        &#8679;
+    </button>
+
+    <!-- Footer -->
     <footer>
-        <p>&copy; 2024 Shubham Tilekar. All rights reserved.</p>
+        <p style="text-align: center;">&copy; 2024 Shubham Tilekar. All rights reserved.</p>
     </footer>
+
+    <script src="https://platform.linkedin.com/badges/js/profile.js" async defer type="text/javascript"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
     <script>
-        window.onscroll = function () { scrollFunction(); };
+        window.onscroll = function () {
+            scrollFunction();
+        };
+
         function scrollFunction() {
             var scrollTopBtn = document.getElementById("scrollTopBtn");
             if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
@@ -121,9 +456,10 @@
                 scrollTopBtn.style.display = "none";
             }
         }
+
         function topFunction() {
-            document.body.scrollTop = 0; // For Safari
-            document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
+            document.body.scrollTop = 0;
+            document.documentElement.scrollTop = 0;
         }
     </script>
 </body>
